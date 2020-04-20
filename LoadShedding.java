@@ -37,6 +37,14 @@ public class LoadShedding {
         return area;
     }
 
+    // Returns true if the 2 objects are equal and false if they're not
+    public boolean equalsTo(LoadShedding load) {
+        if ((this.getPeriod()).equals(load.getPeriod()) & (this.getArea()).equals(load.getArea())) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * compares loadshedding objects to see if the are equal or not
      * this is done by comparing the periods and areas
@@ -83,7 +91,6 @@ public class LoadShedding {
      * @return the loadSHedding object
      */
     public String toString() {
-        // gives you a string version of loadshedding
-        return period + area;
+        return "Period: " + period + ", Areas affected: " + area;
     }
 }
